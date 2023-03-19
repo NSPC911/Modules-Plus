@@ -1,0 +1,75 @@
+{
+ "materials": {
+  "version": "1.0.0",
+  "force_coords:wither_boss_armor": {
+   "+defines": [
+    "USE_MULTITEXTURE"
+   ],
+   "+states": [
+    "DisableAlphaWrite"
+   ],
+   "msaaSupport": "Both",
+   "+samplerStates": [
+    {
+     "samplerIndex": 0,
+     "textureWrap": "Clamp"
+    },
+    {
+     "samplerIndex": 1,
+     "textureWrap": "Clamp"
+    },
+    {
+     "samplerIndex": 2,
+     "textureWrap": "Clamp"
+    }
+   ]
+  },
+  "direction_hud:entity_alphablend": {
+   "+defines": [
+    "USE_UV_ANIM",
+    "USE_MULTITEXTURE"
+   ],
+   "msaaSupport": "Both",
+   "+samplerStates": [
+    {
+     "samplerIndex": 0,
+     "textureWrap": "Repeat",
+     "textureFilter": "Point"
+    },
+    {
+     "samplerIndex": 1,
+     "textureWrap": "Repeat",
+     "textureFilter": "Point"
+    },
+    {
+     "samplerIndex": 2,
+     "textureWrap": "Repeat",
+     "textureFilter": "Point"
+    }
+   ]
+  },
+  "potion_counter:wither_boss_armor": {
+   "+defines": [
+    "USE_MULTITEXTURE"
+   ],
+   "+states": [
+    "DisableAlphaWrite"
+   ],
+   "msaaSupport": "Both",
+   "+samplerStates": [
+    {
+     "samplerIndex": 0,
+     "textureWrap": "Clamp"
+    },
+    {
+     "samplerIndex": 1,
+     "textureWrap": "Clamp"
+    },
+    {
+     "samplerIndex": 2,
+     "textureWrap": "Clamp"
+    }
+   ]
+  }
+ }
+}

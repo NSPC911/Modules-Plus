@@ -1,0 +1,23 @@
+{
+ "format_version": "1.8.0",
+ "animations": {
+  "animation.force_coords": {
+   "loop": true,
+   "bones": {
+    "x": {
+     "position": [
+      -37.9,
+      "(query.is_swimming ? -21.3) + -4258.2",
+      20
+     ],
+     "rotation": [
+      "(query.is_gliding ? -query.body_x_rotation + -90)",
+      "(query.is_gliding ? -query.body_y_rotation) + (query.is_riding ? query.target_y_rotation)",
+      0
+     ],
+     "scale": 5.13
+    }
+   }
+  }
+ }
+}

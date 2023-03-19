@@ -1,0 +1,80 @@
+{
+ "format_version": "1.10.0",
+ "animation_controllers": {
+  "controller.animation.rotation": {
+   "initial_state": "rotation",
+   "states": {
+    "default": {
+     "transitions": [
+      {
+       "rotation": "query.is_in_ui"
+      }
+     ]
+    },
+    "rotation": {
+     "on_entry": [
+      "variable.rotation = 180 + query.camera_rotation(1);"
+     ],
+     "transitions": [
+      {
+       "default": "1"
+      }
+     ]
+    }
+   }
+  },
+  "controller.animation.speed": {
+   "initial_state": "speed",
+   "states": {
+    "default": {
+     "on_entry": [
+      "variable.life_time = query.life_time;"
+     ],
+     "transitions": [
+      {
+       "speed": "query.is_in_ui && ((query.life_time - variable.life_time) > 0.15)"
+      }
+     ]
+    },
+    "speed": {
+     "on_entry": [
+      "variable.speed = query.ground_speed;variable.fps = 1/query.delta_time;"
+     ],
+     "transitions": [
+      {
+       "default": "1"
+      }
+     ]
+    }
+   }
+  },
+  "controller.animation.fps": {
+   "initial_state": "fps",
+   "states": {
+    "default": {
+     "on_entry": [
+      "variable.life_time = query.life_time;variable.fps_frame0 = 1/query.delta_time;"
+     ],
+     "on_exit": [
+      "variable.fps_frame1 = 1/query.delta_time;"
+     ],
+     "transitions": [
+      {
+       "fps": "(query.life_time - variable.life_time) > 0.25"
+      }
+     ]
+    },
+    "fps": {
+     "on_entry": [
+      "variable.fps = (variable.fps_frame0 + variable.fps_frame1)/2;"
+     ],
+     "transitions": [
+      {
+       "default": "1"
+      }
+     ]
+    }
+   }
+  }
+ }
+}

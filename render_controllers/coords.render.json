@@ -1,0 +1,754 @@
+{
+ "format_version": "1.8.0",
+ "render_controllers": {
+  "controller.render.facing": {
+   "geometry": "Geometry.facing",
+   "materials": [
+    {
+     "*": "Material.ui_blend_bg"
+    }
+   ],
+   "textures": [
+    "Texture.force_coords_bg"
+   ],
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "arrays": {
+    "textures": {
+     "array.background": [
+      "Texture.c1_num0",
+      "Texture.c1_num1",
+      "Texture.c1_num1",
+      "Texture.c1_num1"
+     ],
+     "array.facing": [
+      "Texture.c2_num0",
+      "Texture.c2_num1",
+      "Texture.c2_num2",
+      "Texture.c2_num3",
+      "Texture.c2_num4",
+      "Texture.c2_num5",
+      "Texture.c2_num6",
+      "Texture.c2_num7",
+      "Texture.c2_num8",
+      "Texture.c2_num9"
+     ]
+    }
+   }
+  },
+  "controller.render.skin_icon": {
+   "geometry": "Geometry.skin_icon",
+   "materials": [
+    {
+     "*": "Material.default"
+    }
+   ],
+   "textures": [
+    "Texture.default"
+   ],
+   "is_hurt_color": {},
+   "on_fire_color": {}
+  },
+  "controller.render.x": {
+   "geometry": "Geometry.x",
+   "materials": [
+    {
+     "*": "Material.force_coords"
+    }
+   ],
+   "textures": [
+    "array.c1[math.abs(query.position(0) + (query.position(0) < 0 ? -1))]",
+    "(query.position(0) < 0) && (query.position(0) > -9) ? Texture.c2_neg : (math.abs(query.position(0) + (query.position(0) < 0 ? -1)) > 10 ? array.c2[(math.abs(query.position(0) + (query.position(0) < 0 ? -1)))*0.1] : Texture.blank)",
+    "(query.position(0) < -9) && (query.position(0) > -99) ? Texture.c3_neg : (math.abs(query.position(0) + (query.position(0) < 0 ? -1)) > 100 ? array.c3[(math.abs(query.position(0) + (query.position(0) < 0 ? -1)))*0.01] : Texture.blank)"
+   ],
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "uv_anim": {
+    "offset": [
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1
+    ]
+   },
+   "arrays": {
+    "textures": {
+     "array.c1": [
+      "Texture.c1_num0",
+      "Texture.c1_num1",
+      "Texture.c1_num2",
+      "Texture.c1_num3",
+      "Texture.c1_num4",
+      "Texture.c1_num5",
+      "Texture.c1_num6",
+      "Texture.c1_num7",
+      "Texture.c1_num8",
+      "Texture.c1_num9"
+     ],
+     "array.c2": [
+      "Texture.c2_num0",
+      "Texture.c2_num1",
+      "Texture.c2_num2",
+      "Texture.c2_num3",
+      "Texture.c2_num4",
+      "Texture.c2_num5",
+      "Texture.c2_num6",
+      "Texture.c2_num7",
+      "Texture.c2_num8",
+      "Texture.c2_num9"
+     ],
+     "array.c3": [
+      "Texture.c3_num0",
+      "Texture.c3_num1",
+      "Texture.c3_num2",
+      "Texture.c3_num3",
+      "Texture.c3_num4",
+      "Texture.c3_num5",
+      "Texture.c3_num6",
+      "Texture.c3_num7",
+      "Texture.c3_num8",
+      "Texture.c3_num9"
+     ]
+    }
+   }
+  },
+  "controller.render.x2": {
+   "geometry": "Geometry.x2",
+   "materials": [
+    {
+     "*": "Material.force_coords"
+    }
+   ],
+   "textures": [
+    "(query.position(0) < -99) && (query.position(0) > -999) ? Texture.c1_neg : (math.abs(query.position(0) + (query.position(0) < 0 ? -1)) > 1000 ? array.c4[(math.abs(query.position(0) + (query.position(0) < 0 ? -1)))*0.001] : Texture.blank)",
+    "(query.position(0) < -999) && (query.position(0) > -9999) ? Texture.c2_neg : (math.abs(query.position(0) + (query.position(0) < 0 ? -1)) > 10000 ? array.c5[(math.abs(query.position(0) + (query.position(0) < 0 ? -1)))*0.0001] : Texture.blank)",
+    "(query.position(0) < -9999) && (query.position(0) > -99999) ? Texture.c3_neg : (math.abs(query.position(0) + (query.position(0) < 0 ? -1)) > 100000 ? array.c6[(math.abs(query.position(0) + (query.position(0) < 0 ? -1)))*0.00001] : Texture.blank)"
+   ],
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "arrays": {
+    "textures": {
+     "array.c4": [
+      "Texture.c1_num0",
+      "Texture.c1_num1",
+      "Texture.c1_num2",
+      "Texture.c1_num3",
+      "Texture.c1_num4",
+      "Texture.c1_num5",
+      "Texture.c1_num6",
+      "Texture.c1_num7",
+      "Texture.c1_num8",
+      "Texture.c1_num9"
+     ],
+     "array.c5": [
+      "Texture.c2_num0",
+      "Texture.c2_num1",
+      "Texture.c2_num2",
+      "Texture.c2_num3",
+      "Texture.c2_num4",
+      "Texture.c2_num5",
+      "Texture.c2_num6",
+      "Texture.c2_num7",
+      "Texture.c2_num8",
+      "Texture.c2_num9"
+     ],
+     "array.c6": [
+      "Texture.c3_num0",
+      "Texture.c3_num1",
+      "Texture.c3_num2",
+      "Texture.c3_num3",
+      "Texture.c3_num4",
+      "Texture.c3_num5",
+      "Texture.c3_num6",
+      "Texture.c3_num7",
+      "Texture.c3_num8",
+      "Texture.c3_num9"
+     ]
+    }
+   }
+  },
+  "controller.render.x3": {
+   "geometry": "Geometry.x3",
+   "materials": [
+    {
+     "*": "Material.force_coords"
+    }
+   ],
+   "textures": [
+    "(query.position(0) < -99999) && (query.position(0) > -999999) ? Texture.c1_neg : (math.abs(query.position(0) + (query.position(0) < 0 ? -1)) > 1000000 ? array.c7[(math.abs(query.position(0) + (query.position(0) < 0 ? -1)))*0.000001] : Texture.blank)",
+    "(query.position(0) < -999999) && (query.position(0) > -9999999) ? Texture.c2_neg : (math.abs(query.position(0) + (query.position(0) < 0 ? -1)) > 10000000 ? array.c8[(math.abs(query.position(0) + (query.position(0) < 0 ? -1)))*0.0000001] : Texture.blank)",
+    "(query.position(0) < -9999999) && (query.position(0) > -99999999) ? Texture.c3_neg : Texture.blank"
+   ],
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "arrays": {
+    "textures": {
+     "array.c7": [
+      "Texture.c1_num0",
+      "Texture.c1_num1",
+      "Texture.c1_num2",
+      "Texture.c1_num3",
+      "Texture.c1_num4",
+      "Texture.c1_num5",
+      "Texture.c1_num6",
+      "Texture.c1_num7",
+      "Texture.c1_num8",
+      "Texture.c1_num9"
+     ],
+     "array.c8": [
+      "Texture.c2_num0",
+      "Texture.c2_num1",
+      "Texture.c2_num2",
+      "Texture.c2_num3",
+      "Texture.c2_num4",
+      "Texture.c2_num5",
+      "Texture.c2_num6",
+      "Texture.c2_num7",
+      "Texture.c2_num8",
+      "Texture.c2_num9"
+     ],
+     "array.c9": [
+      "Texture.c3_num0",
+      "Texture.c3_num1",
+      "Texture.c3_num2",
+      "Texture.c3_num3",
+      "Texture.c3_num4",
+      "Texture.c3_num5",
+      "Texture.c3_num6",
+      "Texture.c3_num7",
+      "Texture.c3_num8",
+      "Texture.c3_num9"
+     ]
+    }
+   }
+  },
+  "controller.render.y": {
+   "geometry": "Geometry.y",
+   "materials": [
+    {
+     "*": "Material.force_coords"
+    }
+   ],
+   "textures": [
+    "array.c1[math.abs(variable.position_y + (variable.position_y < 0 ? -1))]",
+    "(variable.position_y < 0) && (variable.position_y > -9) ? Texture.c2_neg : (math.abs(variable.position_y + (variable.position_y < 0 ? -1)) > 9 ? array.c2[(math.abs(variable.position_y + (variable.position_y < 0 ? -1)))*0.1] : Texture.blank)",
+    "(variable.position_y < -9) && (variable.position_y > -99) ? Texture.c3_neg : (math.abs(variable.position_y + (variable.position_y < 0 ? -1)) > 99 ? array.c3[(math.abs(variable.position_y + (variable.position_y < 0 ? -1)))*0.01] : Texture.blank)"
+   ],
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "uv_anim": {
+    "offset": [
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1
+    ]
+   },
+   "arrays": {
+    "textures": {
+     "array.c1": [
+      "Texture.c1_num0",
+      "Texture.c1_num1",
+      "Texture.c1_num2",
+      "Texture.c1_num3",
+      "Texture.c1_num4",
+      "Texture.c1_num5",
+      "Texture.c1_num6",
+      "Texture.c1_num7",
+      "Texture.c1_num8",
+      "Texture.c1_num9"
+     ],
+     "array.c2": [
+      "Texture.c2_num0",
+      "Texture.c2_num1",
+      "Texture.c2_num2",
+      "Texture.c2_num3",
+      "Texture.c2_num4",
+      "Texture.c2_num5",
+      "Texture.c2_num6",
+      "Texture.c2_num7",
+      "Texture.c2_num8",
+      "Texture.c2_num9"
+     ],
+     "array.c3": [
+      "Texture.c3_num0",
+      "Texture.c3_num1",
+      "Texture.c3_num2",
+      "Texture.c3_num3",
+      "Texture.c3_num4",
+      "Texture.c3_num5",
+      "Texture.c3_num6",
+      "Texture.c3_num7",
+      "Texture.c3_num8",
+      "Texture.c3_num9"
+     ]
+    }
+   }
+  },
+  "controller.render.y2": {
+   "geometry": "Geometry.y2",
+   "materials": [
+    {
+     "*": "Material.force_coords"
+    }
+   ],
+   "textures": [
+    "(variable.position_y < -99) && (variable.position_y > -999) ? Texture.c1_neg : (math.abs(variable.position_y + (variable.position_y < 0 ? -1)) > 999 ? array.c4[(math.abs(variable.position_y + (variable.position_y < 0 ? -1)))*0.001] : Texture.blank)",
+    "(variable.position_y < -999) && (variable.position_y > -9999) ? Texture.c2_neg : (math.abs(variable.position_y + (variable.position_y < 0 ? -1)) > 9999 ? array.c5[(math.abs(variable.position_y + (variable.position_y < 0 ? -1)))*0.0001] : Texture.blank)",
+    "(variable.position_y < -9999) && (variable.position_y > -99999) ? Texture.c3_neg : Texture.blank"
+   ],
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "arrays": {
+    "textures": {
+     "array.c4": [
+      "Texture.c1_num0",
+      "Texture.c1_num1",
+      "Texture.c1_num2",
+      "Texture.c1_num3",
+      "Texture.c1_num4",
+      "Texture.c1_num5",
+      "Texture.c1_num6",
+      "Texture.c1_num7",
+      "Texture.c1_num8",
+      "Texture.c1_num9"
+     ],
+     "array.c5": [
+      "Texture.c2_num0",
+      "Texture.c2_num1",
+      "Texture.c2_num2",
+      "Texture.c2_num3",
+      "Texture.c2_num4",
+      "Texture.c2_num5",
+      "Texture.c2_num6",
+      "Texture.c2_num7",
+      "Texture.c2_num8",
+      "Texture.c2_num9"
+     ],
+     "array.c6": [
+      "Texture.c3_num0",
+      "Texture.c3_num1",
+      "Texture.c3_num2",
+      "Texture.c3_num3",
+      "Texture.c3_num4",
+      "Texture.c3_num5",
+      "Texture.c3_num6",
+      "Texture.c3_num7",
+      "Texture.c3_num8",
+      "Texture.c3_num9"
+     ]
+    }
+   }
+  },
+  "controller.render.z": {
+   "geometry": "Geometry.z",
+   "materials": [
+    {
+     "*": "Material.force_coords"
+    }
+   ],
+   "textures": [
+    "array.c1[math.abs(query.position(2) + (query.position(2) < 0 ? -1))]",
+    "(query.position(2) < 0) && (query.position(2) > -9) ? Texture.c2_neg : (math.abs(query.position(2) + (query.position(2) < 0 ? -1)) > 10 ? array.c2[(math.abs(query.position(2) + (query.position(2) < 0 ? -1)))*0.1] : Texture.blank)",
+    "(query.position(2) < -9) && (query.position(2) > -99) ? Texture.c3_neg : (math.abs(query.position(2) + (query.position(2) < 0 ? -1)) > 100 ? array.c3[(math.abs(query.position(2) + (query.position(2) < 0 ? -1)))*0.01] : Texture.blank)"
+   ],
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "uv_anim": {
+    "offset": [
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1
+    ]
+   },
+   "arrays": {
+    "textures": {
+     "array.c1": [
+      "Texture.c1_num0",
+      "Texture.c1_num1",
+      "Texture.c1_num2",
+      "Texture.c1_num3",
+      "Texture.c1_num4",
+      "Texture.c1_num5",
+      "Texture.c1_num6",
+      "Texture.c1_num7",
+      "Texture.c1_num8",
+      "Texture.c1_num9"
+     ],
+     "array.c2": [
+      "Texture.c2_num0",
+      "Texture.c2_num1",
+      "Texture.c2_num2",
+      "Texture.c2_num3",
+      "Texture.c2_num4",
+      "Texture.c2_num5",
+      "Texture.c2_num6",
+      "Texture.c2_num7",
+      "Texture.c2_num8",
+      "Texture.c2_num9"
+     ],
+     "array.c3": [
+      "Texture.c3_num0",
+      "Texture.c3_num1",
+      "Texture.c3_num2",
+      "Texture.c3_num3",
+      "Texture.c3_num4",
+      "Texture.c3_num5",
+      "Texture.c3_num6",
+      "Texture.c3_num7",
+      "Texture.c3_num8",
+      "Texture.c3_num9"
+     ]
+    }
+   }
+  },
+  "controller.render.z2": {
+   "geometry": "Geometry.z2",
+   "materials": [
+    {
+     "*": "Material.force_coords"
+    }
+   ],
+   "textures": [
+    "(query.position(2) < -99) && (query.position(2) > -999) ? Texture.c1_neg : (math.abs(query.position(2) + (query.position(2) < 0 ? -1)) > 1000 ? array.c4[(math.abs(query.position(2) + (query.position(2) < 0 ? -1)))*0.001] : Texture.blank)",
+    "(query.position(2) < -999) && (query.position(2) > -9999) ? Texture.c2_neg : (math.abs(query.position(2) + (query.position(2) < 0 ? -1)) > 10000 ? array.c5[(math.abs(query.position(2) + (query.position(2) < 0 ? -1)))*0.0001] : Texture.blank)",
+    "(query.position(2) < -9999) && (query.position(2) > -99999) ? Texture.c3_neg : (math.abs(query.position(2) + (query.position(2) < 0 ? -1)) > 100000 ? array.c6[(math.abs(query.position(2) + (query.position(2) < 0 ? -1)))*0.00001] : Texture.blank)"
+   ],
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "arrays": {
+    "textures": {
+     "array.c4": [
+      "Texture.c1_num0",
+      "Texture.c1_num1",
+      "Texture.c1_num2",
+      "Texture.c1_num3",
+      "Texture.c1_num4",
+      "Texture.c1_num5",
+      "Texture.c1_num6",
+      "Texture.c1_num7",
+      "Texture.c1_num8",
+      "Texture.c1_num9"
+     ],
+     "array.c5": [
+      "Texture.c2_num0",
+      "Texture.c2_num1",
+      "Texture.c2_num2",
+      "Texture.c2_num3",
+      "Texture.c2_num4",
+      "Texture.c2_num5",
+      "Texture.c2_num6",
+      "Texture.c2_num7",
+      "Texture.c2_num8",
+      "Texture.c2_num9"
+     ],
+     "array.c6": [
+      "Texture.c3_num0",
+      "Texture.c3_num1",
+      "Texture.c3_num2",
+      "Texture.c3_num3",
+      "Texture.c3_num4",
+      "Texture.c3_num5",
+      "Texture.c3_num6",
+      "Texture.c3_num7",
+      "Texture.c3_num8",
+      "Texture.c3_num9"
+     ]
+    }
+   }
+  },
+  "controller.render.z3": {
+   "geometry": "Geometry.z3",
+   "materials": [
+    {
+     "*": "Material.force_coords"
+    }
+   ],
+   "textures": [
+    "(query.position(2) < -99999) && (query.position(2) > -999999) ? Texture.c1_neg : (math.abs(query.position(2) + (query.position(2) < 0 ? -1)) > 1000000 ? array.c7[(math.abs(query.position(2) + (query.position(2) < 0 ? -1)))*0.000001] : Texture.blank)",
+    "(query.position(2) < -999999) && (query.position(2) > -9999999) ? Texture.c2_neg : (math.abs(query.position(2) + (query.position(2) < 0 ? -1)) > 10000000 ? array.c8[(math.abs(query.position(2) + (query.position(2) < 0 ? -1)))*0.0000001] : Texture.blank)",
+    "(query.position(2) < -9999999) && (query.position(2) > -99999999) ? Texture.c3_neg : Texture.blank"
+   ],
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "arrays": {
+    "textures": {
+     "array.c7": [
+      "Texture.c1_num0",
+      "Texture.c1_num1",
+      "Texture.c1_num2",
+      "Texture.c1_num3",
+      "Texture.c1_num4",
+      "Texture.c1_num5",
+      "Texture.c1_num6",
+      "Texture.c1_num7",
+      "Texture.c1_num8",
+      "Texture.c1_num9"
+     ],
+     "array.c8": [
+      "Texture.c2_num0",
+      "Texture.c2_num1",
+      "Texture.c2_num2",
+      "Texture.c2_num3",
+      "Texture.c2_num4",
+      "Texture.c2_num5",
+      "Texture.c2_num6",
+      "Texture.c2_num7",
+      "Texture.c2_num8",
+      "Texture.c2_num9"
+     ],
+     "array.c9": [
+      "Texture.c3_num0",
+      "Texture.c3_num1",
+      "Texture.c3_num2",
+      "Texture.c3_num3",
+      "Texture.c3_num4",
+      "Texture.c3_num5",
+      "Texture.c3_num6",
+      "Texture.c3_num7",
+      "Texture.c3_num8",
+      "Texture.c3_num9"
+     ]
+    }
+   }
+  },
+  "controller.render.speedometer": {
+   "geometry": "Geometry.speedometer",
+   "materials": [
+    {
+     "*": "Material.force_coords"
+    }
+   ],
+   "textures": [
+    "array.c1[variable.speed*10]",
+    "array.c2[variable.speed]",
+    "array.c3[variable.speed/10]"
+   ],
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "arrays": {
+    "textures": {
+     "array.c1": [
+      "Texture.c1_num0",
+      "Texture.c1_num1",
+      "Texture.c1_num2",
+      "Texture.c1_num3",
+      "Texture.c1_num4",
+      "Texture.c1_num5",
+      "Texture.c1_num6",
+      "Texture.c1_num7",
+      "Texture.c1_num8",
+      "Texture.c1_num9"
+     ],
+     "array.c2": [
+      "Texture.c2_num0",
+      "Texture.c2_num1",
+      "Texture.c2_num2",
+      "Texture.c2_num3",
+      "Texture.c2_num4",
+      "Texture.c2_num5",
+      "Texture.c2_num6",
+      "Texture.c2_num7",
+      "Texture.c2_num8",
+      "Texture.c2_num9"
+     ],
+     "array.c3": [
+      "Texture.c3_num0",
+      "Texture.c3_num1",
+      "Texture.c3_num2",
+      "Texture.c3_num3",
+      "Texture.c3_num4",
+      "Texture.c3_num5",
+      "Texture.c3_num6",
+      "Texture.c3_num7",
+      "Texture.c3_num8",
+      "Texture.c3_num9"
+     ]
+    }
+   }
+  },
+  "controller.render.fps_counter_bg": {
+   "geometry": "Geometry.fps_counter_bg",
+   "materials": [
+    {
+     "*": "Material.ui_blend_bg"
+    }
+   ],
+   "textures": [
+    "Texture.fps_counter_bg"
+   ],
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25
+  },
+  "controller.render.fps_counter": {
+   "geometry": "Geometry.fps_counter",
+   "materials": [
+    {
+     "*": "Material.force_coords"
+    }
+   ],
+   "textures": [
+    "array.c1[variable.fps]",
+    "array.c2[variable.fps/10]",
+    "array.c3[variable.fps/100]"
+   ],
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "arrays": {
+    "textures": {
+     "array.c1": [
+      "Texture.c1_num0",
+      "Texture.c1_num1",
+      "Texture.c1_num2",
+      "Texture.c1_num3",
+      "Texture.c1_num4",
+      "Texture.c1_num5",
+      "Texture.c1_num6",
+      "Texture.c1_num7",
+      "Texture.c1_num8",
+      "Texture.c1_num9"
+     ],
+     "array.c2": [
+      "Texture.c2_num0",
+      "Texture.c2_num1",
+      "Texture.c2_num2",
+      "Texture.c2_num3",
+      "Texture.c2_num4",
+      "Texture.c2_num5",
+      "Texture.c2_num6",
+      "Texture.c2_num7",
+      "Texture.c2_num8",
+      "Texture.c2_num9"
+     ],
+     "array.c3": [
+      "Texture.c3_num0",
+      "Texture.c3_num1",
+      "Texture.c3_num2",
+      "Texture.c3_num3",
+      "Texture.c3_num4",
+      "Texture.c3_num5",
+      "Texture.c3_num6",
+      "Texture.c3_num7",
+      "Texture.c3_num8",
+      "Texture.c3_num9"
+     ]
+    }
+   }
+  },
+  "controller.render.potion_counter": {
+   "geometry": "Geometry.potion_counter",
+   "materials": [
+    {
+     "*": "Material.ui_blend_bg",
+     "x2": "Material.potion_counter"
+    }
+   ],
+   "textures": [
+    "Texture.potion_counter_bg",
+    "array.c1[variable.potion]",
+    "array.c2[variable.potion/10]"
+   ],
+   "overlay_color": {
+    "r": "variable.potion = !variable.is_paperdoll ? (q.is_item_name_any('slot.hotbar', 0, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.hotbar', 1, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.hotbar', 2, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.hotbar', 3, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.hotbar', 4, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.hotbar', 5, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.hotbar', 6, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.hotbar', 7, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.hotbar', 8, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 0, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 1, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 2, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 3, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 4, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 5, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 6, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 7, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 8, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 9, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 10, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 11, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 12, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 13, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 14, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 15, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 16, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 17, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 18, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 19, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 20, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 21, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 22, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 23, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 24, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 25, 'minecraft:splash_potion', 'minecraft:potion') + q.is_item_name_any('slot.inventory', 26, 'minecraft:splash_potion', 'minecraft:potion')) : 1;"
+   },
+   "is_hurt_color": {},
+   "on_fire_color": {},
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "arrays": {
+    "textures": {
+     "array.c1": [
+      "Texture.c1_num0",
+      "Texture.c1_num1",
+      "Texture.c1_num2",
+      "Texture.c1_num3",
+      "Texture.c1_num4",
+      "Texture.c1_num5",
+      "Texture.c1_num6",
+      "Texture.c1_num7",
+      "Texture.c1_num8",
+      "Texture.c1_num9"
+     ],
+     "array.c2": [
+      "Texture.c2_num0",
+      "Texture.c2_num1",
+      "Texture.c2_num2",
+      "Texture.c2_num3",
+      "Texture.c2_num4",
+      "Texture.c2_num5",
+      "Texture.c2_num6",
+      "Texture.c2_num7",
+      "Texture.c2_num8",
+      "Texture.c2_num9"
+     ]
+    }
+   }
+  },
+  "controller.render.direction_hud": {
+   "geometry": "Geometry.direction_hud",
+   "materials": [
+    {
+     "*": "Material.direction_hud"
+    }
+   ],
+   "textures": [
+    "Texture.direction_hud",
+    "Texture.direction_hud",
+    "Texture.direction_hud"
+   ],
+   "filter_lighting": true,
+   "ignore_lighting": true,
+   "light_color_multiplier": 1.25,
+   "uv_anim": {
+    "offset": [
+     "0.00277777777778 * (90 + query.camera_rotation(1))",
+     0
+    ],
+    "scale": [
+     1,
+     1
+    ]
+   }
+  }
+ }
+}

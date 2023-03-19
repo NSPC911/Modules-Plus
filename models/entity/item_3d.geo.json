@@ -1,0 +1,44 @@
+{
+ "format_version": "1.16.0",
+ "minecraft:geometry": [
+  {
+   "description": {
+    "identifier": "geometry.item_3d",
+    "texture_width": 16,
+    "texture_height": 16,
+    "visible_bounds_width": 1,
+    "visible_bounds_height": 1,
+    "visible_bounds_offset": [
+     0,
+     0,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "body",
+     "pivot": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      -50,
+      0,
+      0
+     ],
+     "texture_meshes": [
+      {
+       "texture": "default",
+       "position": [
+        -8,
+        -1,
+        -8
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
