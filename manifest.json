@@ -1,0 +1,30 @@
+{
+  "format_version": 2,
+  "header": {
+    "uuid": "9bc02a91-3afa-45ae-b643-c5af52056d22",
+    "name": "§3Modules§a+ §7V1.1",
+    "description": "Modules+ §7V1.1 §fBy §3Chainsketch\n§rPatched by §bNSPG911",
+    "version": [
+      1,
+      1,
+      0
+    ],
+  "min_engine_version": [
+   1,
+   19,
+   70
+  ]
+  },
+  "modules": [
+    {
+      "description": "V1.1",
+      "type": "resources",
+      "version": [
+        1,
+        1,
+        0
+      ],
+      "uuid": "7a0f9caa-d2a1-45f6-a8c0-763c81a3c884"
+    }
+  ]
+}

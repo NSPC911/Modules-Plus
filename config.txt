@@ -1,0 +1,43 @@
+    {"namespace":"con","f@i.g":{
+
+// This is the default config, you can change which
+// features are toggled on and off by default here.
+// You can change the values to "true" or "false"
+// depending on your current in-game config.
+
+     /* FEATURES */
+
+    "$controller_keystrokes": false,
+    "$fps_counter": false,
+    "$force_coordinates": true,
+    "$direction_hud": true,
+    "$potion_counter": false,
+    "$mainhand_slot": true,
+    "$debug_screen": false,
+    "$server_display": true,
+    "$lightener": false,
+    "$list": true,
+    "$paperdoll": true,
+    "$chat": true,
+
+     /* OPTIONS */
+
+    "$keystrokes_opacity": 0.5, // Must be between (0 - 1)
+    "$rgb_keystrokes": true,
+    "$hide_default_coordinates": false,
+    "$hide_durability_label": false,
+    "$debug_screen_opacity": 0.2, // Must be between (0 - 1)
+    "$server_display_opacity": 0.2, // Must be between (0 - 1)
+    "$lightener_brightness": 1, // Must be between (0 - 1)
+    "$torch_lightener_brightness": 1, // Must be between (0 - 1)
+    "$torch_lightener": true,
+    "$list_opacity": 0, // Must be between (0 - 1)
+    "$paperdoll_x_anchor": 1, // Must be between (0 - 2)
+    "$paperdoll_y_offset": 12, // Must be between (0 - 14)
+    "$live_paperdoll": true,
+    "$chat_opacity": 0, // Must be between (0 - 1)
+    "$chat_animations": true,
+    "$bottom_chat": true,
+    "$dynamic_popup": true,
+
+    "\u0024e":"\u0074"}}
