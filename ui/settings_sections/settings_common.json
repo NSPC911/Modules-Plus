@@ -1,0 +1,73 @@
+{
+ "namespace": "settings_common",
+ "option_toggle_on@settings_common.option_toggle_state_template": {
+  "texture": "$texture",
+  "$texture|default": "textures/ui/toggle_on",
+  "$m+_theme|default": false,
+  "variables": [
+   {
+    "requires": "$m+_theme",
+    "$texture": "textures/sketch/ui/toggle_on"
+   }
+  ]
+ },
+ "option_toggle_off@settings_common.option_toggle_state_template": {
+  "texture": "$texture",
+  "$texture|default": "textures/ui/toggle_off",
+  "$m+_theme|default": false,
+  "variables": [
+   {
+    "requires": "$m+_theme",
+    "$texture": "textures/sketch/ui/toggle_off"
+   }
+  ]
+ },
+ "option_toggle_on_hover@settings_common.option_toggle_state_template": {
+  "texture": "$texture",
+  "$texture|default": "textures/ui/toggle_on_hover",
+  "$m+_theme|default": false,
+  "variables": [
+   {
+    "requires": "$m+_theme",
+    "$texture": "textures/sketch/ui/toggle_on_hover"
+   }
+  ]
+ },
+ "option_toggle_off_hover@settings_common.option_toggle_state_template": {
+  "texture": "$texture",
+  "$texture|default": "textures/ui/toggle_off_hover",
+  "$m+_theme|default": false,
+  "variables": [
+   {
+    "requires": "$m+_theme",
+    "$texture": "textures/sketch/ui/toggle_off_hover"
+   }
+  ]
+ },
+ "option_toggle_control@common.toggle": {
+  "layer": 2,
+  "$toggle_state_binding_name|default": "$option_binding_name",
+  "$toggle_enabled_binding_name|default": "$option_enabled_binding_name",
+  "$toggle_enabled_binding_type|default": "global",
+  "size": [
+   "100%",
+   "100%c"
+  ],
+  "$binding_type": "global",
+  "$binding_condition": "once",
+  "$unchecked_control|default": "settings_common.option_toggle_off",
+  "$checked_control|default": "settings_common.option_toggle_on",
+  "$unchecked_hover_control|default": "settings_common.option_toggle_off_hover",
+  "$checked_hover_control|default": "settings_common.option_toggle_on_hover",
+  "$unchecked_locked_control|default": "settings_common.option_toggle_off_locked",
+  "$enable_directional_toggling": false,
+  "enabled": "$enabled",
+  "variables": [
+   {
+    "requires": "(not $option_enabled_binding_name or not $enabled)",
+    "$toggle_enabled_binding_name": "#not_data_bound",
+    "$toggle_enabled_binding_type": "none"
+   }
+  ]
+ }
+}

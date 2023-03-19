@@ -1,0 +1,40 @@
+{
+ "namespace": "common",
+ "toggle@common.toggle_visuals": {
+  "focus_magnet_enabled": "$focus_magnet_enabled",
+  "$focus_magnet_enabled|default": true
+ },
+ "slider_button_layout@common.slider_button_state": {
+  "texture": "$texture",
+  "$texture|default": "textures/ui/slider_button_default",
+  "$m+_theme|default": false,
+  "variables": [
+   {
+    "requires": "$m+_theme",
+    "$texture": "textures/sketch/ui/slider_button"
+   }
+  ]
+ },
+ "slider_button_hover_layout@common.slider_button_state": {
+  "texture": "$texture",
+  "$texture|default": "textures/ui/slider_button_default",
+  "$m+_theme|default": false,
+  "variables": [
+   {
+    "requires": "$m+_theme",
+    "$texture": "textures/sketch/ui/slider_button"
+   }
+  ]
+ },
+ "slider_button_indent_layout@common.slider_button_state": {
+  "texture": "$texture",
+  "$texture|default": "textures/ui/slider_button_indent",
+  "$m+_theme|default": false,
+  "variables": [
+   {
+    "requires": "$m+_theme",
+    "$texture": "textures/sketch/ui/slider_button_pressed"
+   }
+  ]
+ }
+}

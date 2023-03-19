@@ -1,0 +1,11 @@
+{
+ "namespace": "controls_section",
+ "controller_section": {
+  "modifications": [
+   {
+    "operation": "remove",
+    "control_name": "option_toggle9"
+   }
+  ]
+ }
+}

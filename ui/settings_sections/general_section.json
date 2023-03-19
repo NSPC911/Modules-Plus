@@ -1,0 +1,11 @@
+{
+ "namespace": "general_section",
+ "video_section": {
+  "modifications": [
+   {
+    "operation": "remove",
+    "control_name": "hide_paperdoll_toggle"
+   }
+  ]
+ }
+}

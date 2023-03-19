@@ -1,0 +1,568 @@
+{
+ "namespace": "persona_deprecated",
+ "emote_wheel_screen_deprecated@common.base_screen": {
+  "force_render_below": true,
+  "absorbs_input": false,
+  "$is_full_screen_layout": false,
+  "$screen_content": "persona_deprecated.emote_screen_toggle_panel",
+  "$screen_bg_content": "hud.blank",
+  "button_mappings": [
+   {
+    "from_button_id": "button.menu_autocomplete",
+    "to_button_id": "button.rebind_mode",
+    "mapping_type": "global"
+   },
+   {
+    "from_button_id": "button.controller_secondary_select",
+    "to_button_id": "button.dressing_room",
+    "mapping_type": "global"
+   },
+   {
+    "from_button_id": "button.menu_cancel",
+    "to_button_id": "button.menu_exit",
+    "mapping_type": "global",
+    "input_mode_condition": "gamepad_and_not_gaze"
+   },
+   {
+    "from_button_id": "button.menu_cancel",
+    "to_button_id": "button.menu_exit",
+    "mapping_type": "global",
+    "input_mode_condition": "not_gamepad"
+   },
+   {
+    "from_button_id": "key.emote",
+    "to_button_id": "key.emote",
+    "mapping_type": "pressed",
+    "input_mode_condition": "gamepad_and_not_gaze"
+   },
+   {
+    "from_button_id": "key.emote",
+    "to_button_id": "key.emote",
+    "mapping_type": "double_pressed",
+    "input_mode_condition": "not_gamepad"
+   }
+  ]
+ },
+ "anim_emote_menu_toggle": {
+  "anim_type": "offset",
+  "easing": "linear",
+  "duration": 0,
+  "from": [
+   -99999999,
+   -99999999
+  ],
+  "to": [
+   -99999999,
+   -99999999
+  ],
+  "destroy_at_end": "$destroy_id",
+  "play_event": "key.emote"
+ },
+ "anim_emote_close_toggle": {
+  "anim_type": "offset",
+  "easing": "linear",
+  "duration": -99999999,
+  "from": [
+   -5,
+   5
+  ],
+  "to": [
+   -5,
+   5
+  ],
+  "play_event": "key.emote"
+ },
+ "emote_wheel_touch_zone@common_buttons.light_content_button": {
+  "size": [
+   "0%",
+   "0%"
+  ]
+ },
+ "emote_button_template": {
+  "type": "panel",
+  "size": [
+   "90%",
+   "90%"
+  ],
+  "$emote|default": -1,
+  "offset": "$offset",
+  "$offset|default": [
+   0,
+   0
+  ],
+  "controls": [
+   {
+    "emote_button_main@settings_common.option_toggle_control": {
+     "size": [
+      50,
+      50
+     ],
+     "anims": [
+      "anim_emote_menu_toggle"
+     ],
+     "layer": 90,
+     "$destroy_id": "emote_button_main",
+     "$grid_features_texture_alpha": 0.7,
+     "$grid_features_texture_size": [
+      50,
+      50
+     ],
+     "$checked_control": "hud.grid_features_texture",
+     "$unchecked_control": "hud.grid_features_texture",
+     "$checked_hover_control": "hud.grid_features_texture_hover_selected",
+     "$unchecked_hover_control": "hud.grid_features_texture_hover_selected",
+     "$option_enabled_binding_name": "#Modules+",
+     "$option_binding_name": "#By_Chainsketch",
+     "$toggle_name": "emote_0_button",
+     "$feature_icon": "textures/sketch/ui/blank",
+     "$feature_text": "",
+     "$enabled": true,
+     "property_bag": {
+      "#hover_slice": "$emote"
+     },
+     "button_mappings": [
+      {
+       "from_button_id": "button.menu_select",
+       "to_button_id": "button.emote_selected",
+       "mapping_type": "pressed"
+      },
+      {
+       "from_button_id": "button.menu_ok",
+       "to_button_id": "button.emote_selected",
+       "mapping_type": "focused"
+      }
+     ],
+     "controls": [
+      {
+       "emote_button@common_buttons.light_content_button": {
+        "size": [
+         50,
+         50
+        ],
+        "anims": [
+         "anim_emote_close_toggle"
+        ],
+        "$hover_state_border_visible": false,
+        "$default_button_alpha": 0,
+        "$default_hover_alpha": 0,
+        "$default_pressed_alpha": 0,
+        "$border_default_alpha": 0,
+        "$pressed_alpha": 0,
+        "property_bag": {
+         "#hover_slice": "$emote"
+        },
+        "button_mappings": [
+         {
+          "from_button_id": "button.menu_select",
+          "to_button_id": "button.emote_selected",
+          "mapping_type": "pressed"
+         },
+         {
+          "from_button_id": "button.menu_ok",
+          "to_button_id": "button.emote_selected",
+          "mapping_type": "focused"
+         }
+        ],
+        "controls": [
+         {
+          "emote_0": {
+           "type": "image",
+           "size": [
+            45,
+            45
+           ],
+           "layer": 1,
+           "texture": "#texture",
+           "property_bag": {
+            "#index": "$emote"
+           },
+           "bindings": [
+            {
+             "binding_name": "#emote_image",
+             "binding_name_override": "#texture",
+             "binding_condition": "always"
+            },
+            {
+             "binding_name": "#emote_image_file_system",
+             "binding_name_override": "#texture_file_system",
+             "binding_condition": "always"
+            },
+            {
+             "binding_name": "#image_is_valid",
+             "binding_name_override": "#visible",
+             "binding_condition": "always"
+            }
+           ]
+          }
+         },
+         {
+          "emote_button_background@hud.grid_features_texture": {
+           "layer": 0,
+           "$grid_features_texture_alpha": 0.7,
+           "$grid_features_texture_size": [
+            50,
+            50
+           ],
+           "$feature_icon": "textures/sketch/ui/blank",
+           "$feature_text": ""
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "emote_screen_toggle_panel": {
+  "type": "panel",
+  "controls": [
+   {
+    "emote_screen_main_panel": {
+     "type": "panel",
+     "offset": [
+      0,
+      -5
+     ],
+     "anims": [
+      "anim_emote_menu_toggle"
+     ],
+     "$destroy_id": "emote_screen_main_panel",
+     "bindings": [
+      {
+       "binding_name": "(not #is_using_gamepad)",
+       "binding_name_override": "#visible"
+      }
+     ],
+     "controls": [
+      {
+       "emote_button_0@emote_button_template": {
+        "$emote": 0,
+        "$offset": [
+         -106,
+         0
+        ]
+       }
+      },
+      {
+       "emote_button_1@emote_button_template": {
+        "$emote": 1,
+        "$offset": [
+         -53,
+         0
+        ]
+       }
+      },
+      {
+       "emote_button_2@emote_button_template": {
+        "$emote": 2
+       }
+      },
+      {
+       "emote_button_3@emote_button_template": {
+        "$emote": 3,
+        "$offset": [
+         53,
+         0
+        ]
+       }
+      },
+      {
+       "emote_button_4@emote_button_template": {
+        "$emote": 4,
+        "$offset": [
+         106,
+         0
+        ]
+       }
+      },
+      {
+       "emote_panel_background": {
+        "type": "image",
+        "size": [
+         268,
+         102
+        ],
+        "offset": [
+         0,
+         5
+        ],
+        "texture": "textures/ui/hud_tip_text_background",
+        "layer": 0,
+        "alpha": 0.65
+       }
+      },
+      {
+       "emote_label": {
+        "type": "image",
+        "offset": [
+         0,
+         -35
+        ],
+        "size": [
+         "100%c + 12px",
+         "100%c + 5px"
+        ],
+        "texture": "textures/ui/hud_tip_text_background",
+        "alpha": 0.7,
+        "layer": 101,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+         {
+          "emote_label_text": {
+           "type": "label",
+           "max_size": [
+            200,
+            "default"
+           ],
+           "anchor_from": "center",
+           "anchor_to": "center",
+           "text_alignment": "center",
+           "layer": 31,
+           "text": "Emotes"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "close_emote_screen_button@common_buttons.light_content_button": {
+        "size": [
+         15,
+         15
+        ],
+        "offset": [
+         122,
+         -35
+        ],
+        "layer": 101,
+        "$hover_state_border_visible": false,
+        "$default_button_alpha": 0,
+        "$default_hover_alpha": 0,
+        "$default_pressed_alpha": 0,
+        "$border_default_alpha": 0,
+        "$pressed_alpha": 0,
+        "bindings": [
+         {
+          "binding_name": "(not #is_using_gamepad)",
+          "binding_name_override": "#visible"
+         }
+        ],
+        "button_mappings": [
+         {
+          "from_button_id": "button.menu_select",
+          "to_button_id": "button.menu_exit",
+          "mapping_type": "pressed"
+         },
+         {
+          "from_button_id": "button.menu_ok",
+          "to_button_id": "button.menu_exit",
+          "mapping_type": "pressed",
+          "input_mode_condition": "gamepad_and_not_gaze"
+         }
+        ],
+        "controls": [
+         {
+          "close": {
+           "type": "image",
+           "size": [
+            "100%c + 12px",
+            "100%c + 5px"
+           ],
+           "texture": "textures/ui/hud_tip_text_background",
+           "alpha": 0.7,
+           "anchor_from": "center",
+           "anchor_to": "center",
+           "controls": [
+            {
+             "close_text": {
+              "type": "label",
+              "max_size": [
+               200,
+               "default"
+              ],
+              "anchor_from": "center",
+              "anchor_to": "center",
+              "text_alignment": "center",
+              "layer": 31,
+              "text": "§cx"
+             }
+            }
+           ]
+          }
+         }
+        ]
+       }
+      },
+      {
+       "rebind_emotes_button@common_buttons.light_content_button": {
+        "size": [
+         256,
+         25
+        ],
+        "offset": [
+         0,
+         41
+        ],
+        "layer": 101,
+        "$hover_state_border_visible": false,
+        "$default_button_alpha": 0,
+        "$default_hover_alpha": 0,
+        "$default_pressed_alpha": 0,
+        "$border_default_alpha": 0,
+        "$pressed_alpha": 0,
+        "button_mappings": [
+         {
+          "from_button_id": "button.menu_select",
+          "to_button_id": "button.dressing_room",
+          "mapping_type": "pressed"
+         },
+         {
+          "from_button_id": "button.menu_ok",
+          "to_button_id": "button.dressing_room",
+          "mapping_type": "pressed"
+         }
+        ],
+        "controls": [
+         {
+          "rebind_emotes_button_texture@hud.checked_features_tab_texture": {
+           "$features_tab_texture_size": [
+            262,
+            25
+           ],
+           "$checked_features_tab_texture|default": "textures/sketch/ui/rebind_emotes_deselected"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "background_features_panel": {
+     "type": "image",
+     "size": [
+      "200%",
+      "200%"
+     ],
+     "anims": [
+      "anim_emote_menu_toggle"
+     ],
+     "$destroy_id": "background_features_panel",
+     "layer": 0,
+     "texture": "textures/ui/Black",
+     "alpha": 0.65
+    }
+   },
+   {
+    "emotes_coming_soon@hud.text": {
+     "text": "Emotes are currently unavailable for controller input",
+     "$text_size": [
+      180,
+      "default"
+     ],
+     "anims": [
+      "anim_emote_menu_toggle"
+     ],
+     "$destroy_id": "emotes_coming_soon",
+     "$text_layer": 1,
+     "$text_anchor": "center",
+     "$text_alignment": "center",
+     "$text_bindings": [
+      {
+       "binding_name": "#is_using_gamepad",
+       "binding_name_override": "#visible"
+      }
+     ]
+    }
+   },
+   {
+    "emote_screen_features_menu_exit_button@common_buttons.light_content_button": {
+     "size": [
+      15,
+      15
+     ],
+     "offset": [
+      0,
+      -999999999
+     ],
+     "anchor_from": "top_right",
+     "anchor_to": "top_right",
+     "anims": [
+      "anim_emote_close_toggle"
+     ],
+     "$hover_state_border_visible": false,
+     "$pressed_button_name": "button.menu_exit",
+     "$default_button_alpha": 0,
+     "$default_hover_alpha": 0,
+     "$default_pressed_alpha": 0,
+     "$border_default_alpha": 0,
+     "$pressed_alpha": 0,
+     "bindings": [
+      {
+       "binding_name": "(not #is_using_gamepad)",
+       "binding_name_override": "#visible"
+      }
+     ],
+     "button_mappings": [
+      {
+       "from_button_id": "button.menu_select",
+       "to_button_id": "$pressed_button_name",
+       "mapping_type": "pressed",
+       "input_mode_condition": "not_gamepad"
+      },
+      {
+       "from_button_id": "button.menu_ok",
+       "to_button_id": "$pressed_button_name",
+       "mapping_type": "focused",
+       "input_mode_condition": "not_gamepad"
+      }
+     ]
+    }
+   },
+   {
+    "emote_screen_features_menu_mobile_button@settings_common.option_toggle_control": {
+     "anchor_from": "top_middle",
+     "anchor_to": "top_middle",
+     "size": [
+      18,
+      18
+     ],
+     "offset": [
+      -19,
+      1
+     ],
+     "$features_tab_texture_size": [
+      18,
+      18
+     ],
+     "$checked_control": "hud.checked_features_tab_texture",
+     "$unchecked_control": "hud.checked_features_tab_texture",
+     "$checked_hover_control": "hud.checked_features_tab_texture",
+     "$unchecked_hover_control": "hud.checked_features_tab_texture",
+     "$option_enabled_binding_name": "#Modules+",
+     "$option_binding_name": "#By_Chainsketch",
+     "$checked_features_tab_texture": "textures/sketch/ui/features_menu_icon",
+     "$toggle_name": "features_menu_mobile_button",
+     "$enabled": true,
+     "ignored": "(not $touch)",
+     "button_mappings": [
+      {
+       "from_button_id": "button.menu_select",
+       "to_button_id": "key.emote",
+       "mapping_type": "pressed"
+      },
+      {
+       "from_button_id": "button.menu_ok",
+       "to_button_id": "key.emote",
+       "mapping_type": "pressed"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}
