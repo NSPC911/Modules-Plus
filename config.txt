@@ -7,37 +7,37 @@
 
      /* FEATURES */
 
-    "$controller_keystrokes": false,
-    "$fps_counter": false,
+    "$controller_keystrokes": true,
+    "$fps_counter": true,
     "$force_coordinates": true,
     "$direction_hud": true,
     "$potion_counter": false,
     "$mainhand_slot": true,
     "$debug_screen": false,
-    "$server_display": true,
+    "$server_display": false,
     "$lightener": false,
-    "$list": true,
+    "$list": false,
     "$paperdoll": true,
     "$chat": true,
 
      /* OPTIONS */
 
-    "$keystrokes_opacity": 0.5, // Must be between (0 - 1)
-    "$rgb_keystrokes": true,
-    "$hide_default_coordinates": false,
+    "$keystrokes_opacity": 0.7, // Must be between (0 - 1)
+    "$rgb_keystrokes": false,
+    "$hide_default_coordinates": true,
     "$hide_durability_label": false,
-    "$debug_screen_opacity": 0.2, // Must be between (0 - 1)
-    "$server_display_opacity": 0.2, // Must be between (0 - 1)
-    "$lightener_brightness": 1, // Must be between (0 - 1)
+    "$debug_screen_opacity": 0.7, // Must be between (0 - 1)
+    "$server_display_opacity": 0.7, // Must be between (0 - 1)
+    "$lightener_brightness": 0.7, // Must be between (0 - 1)
     "$torch_lightener_brightness": 1, // Must be between (0 - 1)
-    "$torch_lightener": true,
-    "$list_opacity": 0, // Must be between (0 - 1)
-    "$paperdoll_x_anchor": 1, // Must be between (0 - 2)
-    "$paperdoll_y_offset": 12, // Must be between (0 - 14)
-    "$live_paperdoll": true,
-    "$chat_opacity": 0, // Must be between (0 - 1)
-    "$chat_animations": true,
-    "$bottom_chat": true,
+    "$torch_lightener": false,
+    "$list_opacity": 0.7, // Must be between (0 - 1)
+    "$paperdoll_x_anchor": 0, // Must be between (0 - 2)
+    "$paperdoll_y_offset": 0, // Must be between (0 - 14)
+    "$live_paperdoll": false,
+    "$chat_opacity": 0.7, // Must be between (0 - 1)
+    "$chat_animations": false,
+    "$bottom_chat": false,
     "$dynamic_popup": true,
 
     "\u0024e":"\u0074"}}
