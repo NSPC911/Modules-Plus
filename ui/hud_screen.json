@@ -4,11 +4,6 @@
   "low_frequency_rendering": true,
   "button_mappings": [
    {
-    "from_button_id": "key.emote",
-    "to_button_id": "button.hide_paperdoll_hud",
-    "mapping_type": "double_pressed"
-   },
-   {
     "from_button_id": "button.scoreboard",
     "to_button_id": "button.scoreboard",
     "mapping_type": "global"
@@ -1569,7 +1564,7 @@
                "modules+_popup@hud.text": {
                 "text": "$text",
                 "visible": "$dynamic_popup",
-                "$text|default": "§8[§c!§8] §fPress the emote button §b(2x)§f\nto open the Features Menu",
+                "$text|default": "§8[§c!§8] §fPress the top left button in pause\n§b(2x) §fto open the Features Menu",
                 "$text_size|default": [
                  "default",
                  "default"
@@ -1855,24 +1850,22 @@
              "anchor_from": "top_middle",
              "anchor_to": "top_middle",
              "size": [
-              18,
-              18
-             ],
-             "offset": [
-              -19,
-              1
+              150,
+              22
              ],
              "$features_tab_texture_size": [
               18,
               18
              ],
+             "anchor_from": "top_left",
+             "anchor_to": "top_left",
              "$checked_control": "hud.checked_features_tab_texture",
              "$unchecked_control": "hud.checked_features_tab_texture",
              "$checked_hover_control": "hud.checked_features_tab_texture",
              "$unchecked_hover_control": "hud.checked_features_tab_texture",
              "$option_enabled_binding_name": "#Modules+",
              "$option_binding_name": "#By_Chainsketch",
-             "$checked_features_tab_texture": "textures/sketch/ui/features_menu_icon",
+             "$checked_features_tab_texture": "textures/sketch/ui/blank",
              "$toggle_name": "features_menu_mobile_button",
              "$enabled": true,
              "bindings": [
@@ -1893,12 +1886,12 @@
               {
                "from_button_id": "button.menu_select",
                "to_button_id": "button.hide_paperdoll_hud",
-               "mapping_type": "pressed"
+               "mapping_type": "double_pressed"
               },
               {
                "from_button_id": "button.menu_ok",
                "to_button_id": "button.hide_paperdoll_hud",
-               "mapping_type": "pressed"
+               "mapping_type": "double_pressed"
               }
              ]
             }
