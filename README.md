@@ -1,5 +1,5 @@
 # Modules+
-This is an community run repository for Chainsketch's Modules+ RP after he had quit making packs for Postdraft.
+This is an unofficial repository for Chainsketch's Modules+ RP.
 No part of this repository has been made by Chainsketch other than the code that it contains.
 Changes in code will always be a pull request and tested before for bugs.
 If anyone of you have any bugs, please report it in the Pull Request Thread or in Issues.

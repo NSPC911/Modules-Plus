@@ -1870,15 +1870,11 @@
              "$enabled": true,
              "bindings": [
               {
-               "binding_name": "#inventory_touch_button",
-               "binding_type": "global"
-              },
-              {
                "binding_name": "#paper_doll_visible"
               },
               {
                "binding_type": "view",
-               "source_property_name": "(#inventory_touch_button and (not #paper_doll_visible))",
+               "source_property_name": "(not #paper_doll_visible)",
                "target_property_name": "#visible"
               }
              ],

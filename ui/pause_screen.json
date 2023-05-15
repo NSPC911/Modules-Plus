@@ -79,53 +79,7 @@
    ]
   },
   
-    "pause_screen_content": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": [
-        {
-                "menu@pause.toggle_thingy": {
-                    "layer": 4,
-                    "size": [
-                        150,
-                        22
-                    ],
-                 "anchor_from": "top_left",
-                 "anchor_to": "top_left",
-                 "$toggle_name": "toggle",
-                 "$toggle_view_binding_name": "pause_view",
-                 "$button_mappings": [
-                      {
-                        "from_button_id": "button.menu_select",
-                        "to_button_id": "button.menu_select",
-                        "mapping_type": "double_pressed"
-                      },
-                      {
-                        "from_button_id": "button.menu_ok",
-                        "to_button_id": "button.menu_ok",
-                        "mapping_type": "double_pressed"
-                      }
-                   ]
-                }
-              }
-           ]
-          },
-      {
-        "array_name": "bindings",
-        "operation": "insert_front",
-        "value": [
-        {
-          "binding_type": "view",
-          "source_control_name": "pause_view",
-          "source_property_name": "(not #toggle_state)",
-          "target_property_name": "#visible"
-        }
-      ]
-    }
-   ]
-  },
+
     "pause_screen_content": {
     "type": "panel",
     "size": [ "100%", "100%" ],
@@ -167,6 +121,12 @@
            "from_button_id": "button.menu_select",
            "to_button_id": "button.menu_select",
            "mapping_type": "double_pressed"
+          },
+          {
+           "from_button_id": "button.controller_select",
+           "to_button_id": "button.menu_select",
+           "mapping_type": "double_pressed",
+           "input_mode_condition": "gamepad_and_not_gaze"
           },
           {
            "from_button_id": "button.menu_ok",

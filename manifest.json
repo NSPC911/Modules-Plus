@@ -1,7 +1,7 @@
 {
   "format_version": 2,
   "header": {
-    "uuid": "47f6f6fe-4f6c-4d8f-af2b-7f6e70eb89a6",
+    "uuid": "f658cb56-f306-11ed-a05b-0242ac120003",
     "name": "§3Modules§a+ §7V1",
     "description": "Modules+ §7V1 §fBy §3Chainsketch\n§rPatched by §bNSPG911§r#0031 and §eVierous§r#1850",
     "version": [
@@ -24,7 +24,7 @@
         1,
         1
       ],
-      "uuid": "67cc057d-d099-4b99-8694-f5fec28b7b19"
+      "uuid": "f658ce4e-f306-11ed-a05b-0242ac120003"
     }
   ]
 }
