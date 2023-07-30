@@ -1,0 +1,144 @@
+{
+	"namespace": "cl_screen",
+	"content_panel": {
+		"type": "panel",
+		"layer": 101,
+		"bindings": [
+			{
+				"binding_type": "view",
+				"source_control_name": "changelog_view",
+				"source_property_name": "#toggle_state",
+				"target_property_name": "#visible"
+			}
+		],
+		"controls": [
+			{
+				"close@vtoggle.toggle": {
+					"$unchecked_control": "vtoggle.1",
+					"$checked_control": "vtoggle.1",
+					"$unchecked_hover_control": "vtoggle.2",
+					"$checked_hover_control": "vtoggle.2",
+					"$hover_text": "exit",
+					"$blank": true,
+					"size": [
+						22,
+						22
+					],
+					"offset": [
+						-2,
+						2
+					],
+					"$toggle_name": "changelog_toggle",
+					"$tab_view_binding_name": "temp_bl",
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"$icon_size": [
+						14,
+						9
+					],
+					"$def": "textures/uix/default",
+					"$icon": "textures/uix/icon2",
+					"$sel": "textures/uix/selected",
+					"$toggle_default_state": true,
+					"$toggle_group_forced_index": 0,
+					"layer": 1,
+					"$back": true
+				}
+			},
+			{
+				"x_panel": {
+					"type": "panel",
+					"offset": [
+						-2,
+						2
+					],
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"layer": 3,
+					"size": [
+						22,
+						22
+					],
+					"controls": [
+						{
+							"x": {
+								"type": "label",
+								"text": "x",
+								"layer": 3
+							}
+						}
+					]
+				}
+			},
+			{
+				"title": {
+					"type": "label",
+					"text": "changelog",
+					"font_type": "MinecraftTen", // mc ten font auto convert from non cap to cap
+					"font_scale_factor": 1.3,
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle",
+					"offset": [
+						0,
+						6.75
+					]
+				}
+			},
+			{
+				"@common.scrolling_panel": {
+					"size": [ 240, "80%" ],
+					"$show_background": false,
+					"anchor_from": "bottom_middle",
+					"anchor_to": "bottom_middle",
+					"$scrolling_content": "inf.changelog_content"
+				}
+			}
+		]
+	},
+	"part@common.button": {
+		"$pressed_button_name": "",
+		"$content|default": "null",
+		"$title|default": "null",
+		"size": [ "100%", 145 ],
+		"controls": [
+			{
+				"hover": {
+					"type": "image",
+					"texture": "textures/uix/outline"
+				}
+			},
+			{
+				"text_panel": {
+					"type": "panel",
+					"size": [ "100% - 4px", "100% - 4px" ],
+					"controls": [
+						{
+							"title": {
+								"offset": [ 1.7, 1.7 ],
+								"type": "label",
+								"text": "$title",
+								"alpha": 1,
+								"font_type": "MinecraftTen",
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"font_scale_factor": 1.8
+							}
+						},
+						{
+							"content": {
+								"type": "label",
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"hide_hyphen": true,
+								"offset": [ 0, "20%" ],
+								"alpha": 0.85,
+								"max_size": [ "100%", "80%" ],
+								"text": "$content"
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}

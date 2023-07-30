@@ -1,0 +1,110 @@
+{
+	"namespace": "vtoggle",
+	"controls": {
+		"$unchecked_control": "",
+		"$checked_control": "",
+		"$unchecked_hover_control": "",
+		"$checked_hover_control": "",
+		"$unchecked_locked_control": "",
+		"$unchecked_locked_hover_control": "",
+		"$checked_locked_control": "",
+		"$checked_locked_hover_control": ""
+	},
+	"toggle@controls": {
+		"type": "panel",
+		"size": [
+			"100%",
+			"100%"
+		],
+		"$volume|default": 1.0,
+		"$pitch|default": 1.0,
+		"$radio_toggle_group": true,
+		"$toggle_focus_enabled": true,
+		"$back|default": false,
+		"$tab_mapping_type": "pressed",
+		"controls": [
+			{
+				"$tab_view_binding_name@common.toggle": {
+					"sound_pitch": "$pitch",
+					"sound_name": "random.click",
+					"sound_volume": "$volume",
+					"button_mappings": [
+						{
+							"ignored": "(not $back)",
+							"from_button_id": "button.menu_cancel",
+							"to_button_id": "button.menu_select",
+							"mapping_type": "global"
+						},
+						{
+							"from_button_id": "button.menu_select",
+							"to_button_id": "button.menu_select",
+							"mapping_type": "$tab_mapping_type"
+						},
+						{
+							"from_button_id": "button.menu_ok",
+							"to_button_id": "button.menu_ok",
+							"mapping_type": "focused"
+						}
+					]
+				}
+			}
+		]
+	},
+	"base": {
+		"type": "image",
+		"alpha": "$button_alpha",
+		"$icon_size|default": [
+			16,
+			16
+		],
+		"$hover_text|default": "null",
+		"$icon|default": "exampl",
+		"$blank|default": false,
+		"controls": [
+			{
+				"icon": {
+					"type": "image",
+					"texture": "$icon",
+					"ignored": "$blank",
+					"size": "$icon_size"
+				}
+			},
+			{
+				"hover": {
+					"type": "image",
+					"texture": "textures/ui/hud_tip_text_background",
+					"alpha": 0.7,
+					"ignored": "$default",
+					"offset": [
+						0,
+						"100% - 2.1px"
+					],
+					"anchor_from": "left_middle",
+					"size": [
+						"100%c + 3px",
+						"100%c + 2.1px"
+					],
+					"anchor_to": "left_middle",
+					"controls": [
+						{
+							"hover_text": {
+								"layer": 13,
+								"type": "label",
+								"text": "$hover_text",
+								"font_scale_factor": 0.97
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+	"1@vtoggle.base": {
+		"$default": true,
+		"texture": "$def"
+	},
+	"2@vtoggle.base": {
+		"$hover": true,
+		"texture": "$sel"
+	}
+}

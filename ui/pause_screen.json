@@ -1,185 +1,282 @@
-/* Pause Screen created By Vierous#1850 as a part of the patch with some code from the oringinal MCBE JSON UI */
 {
-  "namespace": "pause",
-  "pause_screen@common.base_screen": {
-    "force_render_below": true,
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_cancel",
-        "to_button_id": "button.menu_continue",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.controller_start",
-        "to_button_id": "button.menu_continue",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.menu_vr_realign",
-        "to_button_id": "button.menu_vr_realign",
-        "mapping_type": "global",
-        "scope": "controller"
-      },
-      {
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.to_profile_or_skins_screen",
-        "mapping_type": "global",
-        "scope": "controller"
-      },
-      {
-        "from_button_id": "button.menu_tab_left",
-        "to_button_id": "button.menu_tab_left",
-        "mapping_type": "global",
-        "scope": "view"
-      },
-      {
-        "from_button_id": "button.menu_tab_right",
-        "to_button_id": "button.menu_tab_right",
-        "mapping_type": "global",
-        "scope": "view"
-      }
-    ],
-
-    "variables": [
-      {
-        "requires": "$ignore_edu_pause",
-        "$screen_content": "pause.pause_screen_content",
-        "$screen_bg_content": "pause.scr_background"
-      },
-      {
-        "requires": "(not $ignore_edu_pause)",
-        "$screen_content": "edu_pause.pause_screen_content"
-      }
-    ]
-  },
-  
-    "toggle_thingy": {
-    "type": "panel",
-
-    "$toggle_view_binding_name|default": "this_toggle",
-    "$template_toggle|default": "common_toggles.light_template_toggle",
-
-    "controls": [
-      { "$toggle_view_binding_name@$template_toggle": {} },
-      { "moduleplus_text": { "type": "label", "text": "§8Open Modules+ Menu §b(2x)", "layer": 100 } }
-    ]
-  },
-    "scr_background": {
-    "type": "image",
-    "texture": "textures/ui/screen_background",
-    "layer": -98,
-    "alpha": 0.75,
-    "bindings": [
-    {
-          "binding_type": "view",
-          "source_control_name": "pause_view",
-          "source_property_name": "(not #toggle_state)",
-          "target_property_name": "#visible"
-     }
-   ]
-  },
-  
-
-    "pause_screen_content": {
-    "type": "panel",
-    "size": [ "100%", "100%" ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "layer": 1,
-    "variables": [
-      {
-        "requires": "$education_edition",
-        "$achievements_ignored": true
-      },
-      {
-        "requires": "$trial",
-        "$achievements_ignored": true
-      }
-    ],
-    "controls": [
-      {
-        "menu@pause.toggle_thingy": {
-        "layer": 4,
-        "size": [
-        150,
-        22
-        ],
-        "anchor_from": "top_left",
-        "anchor_to": "top_left",
-        "$toggle_name": "toggle",
-        "$toggle_view_binding_name": "pause_view",
-        "bindings": [
-        {
-          "binding_type": "view",
-          "source_control_name": "pause_view",
-          "source_property_name": "(not #toggle_state)",
-          "target_property_name": "#visible"
-        }
-      ],
-        "$button_mappings": [
-          {
-           "from_button_id": "button.menu_select",
-           "to_button_id": "button.menu_select",
-           "mapping_type": "double_pressed"
-          },
-          {
-           "from_button_id": "button.controller_select",
-           "to_button_id": "button.menu_select",
-           "mapping_type": "double_pressed",
-           "input_mode_condition": "gamepad_and_not_gaze"
-          },
-          {
-           "from_button_id": "button.menu_ok",
-           "to_button_id": "button.menu_ok",
-           "mapping_type": "double_pressed"
-          }
-         ]
-        }
-       },
-      { "pause_screen_main_panels@pause.pause_screen_main_panels": {
-      "bindings": [
-       {
-          "binding_type": "view",
-          "source_control_name": "pause_view",
-          "source_property_name": "(not #toggle_state)",
-          "target_property_name": "#visible"
-        }
-      ]
-      } },
-      { "gamepad_helpers@pause.gamepad_helpers": {
-      "bindings": [
-        {
-          "binding_type": "view",
-          "source_control_name": "pause_view",
-          "source_property_name": "(not #toggle_state)",
-          "target_property_name": "#visible"
-        }
-      ]
-      } },
-      { "keyboard_helpers@pause.keyboard_helpers": {
-      "bindings": [
-        {
-          "binding_type": "view",
-          "source_control_name": "pause_view",
-          "source_property_name": "(not #toggle_state)",
-          "target_property_name": "#visible"
-        }
-      ]
-      } },
-      {
-            "close_features_button@i.close_button": {
-             "$close_button": "button.menu_continue",
-             "bindings": [
-                {
-                  "binding_type": "view",
-                  "source_control_name": "pause_view",
-                  "source_property_name": "#toggle_state",
-                  "target_property_name": "#visible"
-                }
-              ],
-             "layer": 101
-            }
-        }
-    ]
-  }
+	"namespace": "pause",
+	"pause_screen@common.base_screen": {
+		"force_render_below": true,
+		"button_mappings": [
+			{
+				"from_button_id": "button.menu_cancel",
+				"to_button_id": "button.menu_continue",
+				"mapping_type": "global"
+			},
+			{
+				"from_button_id": "button.controller_start",
+				"to_button_id": "button.menu_continue",
+				"mapping_type": "global"
+			},
+			{
+				"from_button_id": "button.menu_vr_realign",
+				"to_button_id": "button.menu_vr_realign",
+				"mapping_type": "global",
+				"scope": "controller"
+			},
+			{
+				"from_button_id": "button.controller_select",
+				"to_button_id": "button.to_profile_or_skins_screen",
+				"mapping_type": "global",
+				"scope": "controller"
+			},
+			{
+				"from_button_id": "button.menu_tab_left",
+				"to_button_id": "button.menu_tab_left",
+				"mapping_type": "global",
+				"scope": "view"
+			},
+			{
+				"from_button_id": "button.menu_tab_right",
+				"to_button_id": "button.menu_tab_right",
+				"mapping_type": "global",
+				"scope": "view"
+			}
+		],
+		"variables": [
+			{
+				"requires": "$ignore_edu_pause",
+				"$screen_content": "pause.pause_screen_content",
+				"$screen_bg_content": "pause.scr_background"
+			},
+			{
+				"requires": "(not $ignore_edu_pause)",
+				"$screen_content": "edu_pause.pause_screen_content"
+			}
+		]
+	},
+	"toggle": {
+		"type": "panel",
+		"$toggle_view_binding_name|default": "",
+		"$template_toggle|default": "common_toggles.light_template_toggle",
+		"controls": [
+			{
+				"$toggle_view_binding_name@$template_toggle": {
+					"$unchecked_control": "vtoggle.1",
+					"$checked_control": "vtoggle.1",
+					"$unchecked_hover_control": "vtoggle.2",
+					"$checked_hover_control": "vtoggle.2",
+					"$hover_text": "Open Modules+ Menu §b(2x)",
+					"$icon_size": [ 14.5, 14.5 ],
+					"$def": "textures/uix/default",
+					"$icon": "textures/uix/icon1",
+					"$sel": "textures/uix/selected"
+				}
+			}
+		]
+	},
+	"scr_background": {
+		"type": "image",
+		"texture": "textures/ui/screen_background",
+		"layer": -98,
+		"alpha": 0.75,
+		"bindings": [
+			{
+				"binding_type": "view",
+				"source_control_name": "pause_view",
+				"source_property_name": "(not #toggle_state)",
+				"target_property_name": "#visible"
+			}
+		]
+	},
+	"pause_screen_content": {
+		"type": "panel",
+		"size": [
+			"100%",
+			"100%"
+		],
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"layer": 1,
+		"variables": [
+			{
+				"requires": "$education_edition",
+				"$achievements_ignored": true
+			},
+			{
+				"requires": "$trial",
+				"$achievements_ignored": true
+			}
+		],
+		"controls": [
+			{
+				"menu@pause.toggle": {
+					"layer": 4,
+					"size": [
+						22,
+						22
+					],
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"$toggle_name": "toggle",
+					"$toggle_view_binding_name": "pause_view",
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "pause_view",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible_cond1"
+						},
+						{
+							"binding_type": "view",
+							"source_control_name": "changelog_view",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible_cond2"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "((not #visible_cond1) and (not #visible_cond2))",
+							"target_property_name": "#visible"
+						}
+					],
+					"$button_mappings": [
+						{
+							"from_button_id": "button.menu_select",
+							"to_button_id": "button.menu_select",
+							"mapping_type": "double_pressed"
+						},
+						{
+							"from_button_id": "button.menu_ok",
+							"to_button_id": "button.menu_ok",
+							"mapping_type": "double_pressed"
+						}
+					]
+				}
+			},
+			{
+				"changelog_screen_addition@vtoggle.toggle": {
+					"$unchecked_control": "vtoggle.1",
+					"$checked_control": "vtoggle.1",
+					"$unchecked_hover_control": "vtoggle.2",
+					"$checked_hover_control": "vtoggle.2",
+					"$hover_text": "Changelog",
+					"size": [ 22, 22 ],
+					"offset": [ 25, 0 ],
+					"$toggle_name": "changelog_toggle",
+					"$tab_view_binding_name": "changelog_view",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"$icon_size": [ 14, 9 ],
+					"$def": "textures/uix/default",
+					"$icon": "textures/uix/icon2",
+					"$sel": "textures/uix/selected",
+					"$toggle_group_forced_index": 1,
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "pause_view",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible_cond1_1"
+						},
+						{
+							"binding_type": "view",
+							"source_control_name": "changelog_view",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible_cond2_1"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "((not #visible_cond1_1) and (not #visible_cond2_1))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"pause_screen_main_panels@pause.pause_screen_main_panels": {
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "pause_view",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible_cond1_2"
+						},
+						{
+							"binding_type": "view",
+							"source_control_name": "changelog_view",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible_cond2_2"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "((not #visible_cond1_2) and (not #visible_cond2_2))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"gamepad_helpers@pause.gamepad_helpers": {
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "pause_view",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible_cond1_3"
+						},
+						{
+							"binding_type": "view",
+							"source_control_name": "changelog_view",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible_cond2_3"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "((not #visible_cond1_3) and (not #visible_cond2_3))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"changelog@cl_screen.content_panel": {}
+			},
+			{
+				"keyboard_helpers@pause.keyboard_helpers": {
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "pause_view",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible_cond1_4"
+						},
+						{
+							"binding_type": "view",
+							"source_control_name": "changelog_view",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible_cond2_4"
+						},
+						{
+							"binding_type": "view",
+							"source_property_name": "((not #visible_cond1_4) and (not #visible_cond2_4))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"close_features_button@i.close_button": {
+					"$close_button": "button.menu_continue",
+					"size": [
+						22,
+						22
+					],
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "pause_view",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible"
+						}
+					],
+					"layer": 101
+				}
+			}
+		]
+	}
 }
