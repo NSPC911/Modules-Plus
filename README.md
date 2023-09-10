@@ -1,4 +1,3 @@
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=NSPC911)](https://github.com/anuraghazra/github-readme-stats)
 # Modules+
 This is an unofficial repository for Chainsketch's Modules+ RP.
 No part of this repository has been made by Chainsketch other than the code that it contains.
