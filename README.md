@@ -1,4 +1,4 @@
-![](https://img.shields.io/github/languages/code-size/NSPC911/Modules-Plus?style=for-the-badge)
+![](https://img.shields.io/github/downloads/NSPC911/Modules-Plus/total?style=for-the-badge)
 # Modules+
 This is an unofficial repository for Chainsketch's Modules+ RP.
 No part of this repository has been made by Chainsketch other than the code that it contains.
